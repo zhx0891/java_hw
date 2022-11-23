@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class HwOne {
     public static void main(String[] args) {
 //        firstTask();
-//        secondTask(100);
+//        secondTask(1000);
         thirdTask();
     }
 
@@ -47,7 +47,9 @@ public class HwOne {
     }
 
     static void thirdTask() {
-        System.out.println("Введите выражение вида 'int' 'действие' 'int'\nнапример  2 + 2  между символами обязателен пробел\nДоступные операции - сложение, умножение, деление, произведение ");
+        System.out.println("Введите выражение вида 'int' 'действие' 'int'\nнапример  2 + 2 " +
+                " между символами обязателен пробел\n" +
+                "Доступные операции - сложение, умножение, деление, произведение ");
         Scanner str = new Scanner(System.in);
         String expr = str.nextLine();
         String[] strSplit = expr.split(" ");
@@ -70,9 +72,7 @@ public class HwOne {
                     break;
                 default:
                     System.out.println("что то пошло не так  ;) ");
-
             }
-
         }
     }
 }
