@@ -13,12 +13,21 @@ public class HwOne {
     }
     static void firstTask(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("???");
+        System.out.print("Хочу треугольное число, пиши :  ");
         int num = scan.nextInt();
         num ++;
-        System.out.println(num);
+        int sum = 0;
+        int mult = 1;
+        for (int i = 0; i < num; i++) {
+            sum = sum + i;
+            if (i > 0) {
+                mult = mult * i;
+            };
+
 
     }
+        System.out.println("Сумма равна " + sum + "; Произведение равно " + mult);
 
 
-}
+}}
+
