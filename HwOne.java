@@ -2,14 +2,8 @@ import java.util.Scanner;
 
 public class HwOne {
     public static void main(String[] args) {
-        firstTask();
-
-
-
-
-
-
-
+//        firstTask();
+        secondTask(10);
     }
     static void firstTask(){
         Scanner scan = new Scanner(System.in);
@@ -23,11 +17,26 @@ public class HwOne {
             if (i > 0) {
                 mult = mult * i;
             };
-
-
     }
         System.out.println("Сумма равна " + sum + "; Произведение равно " + mult);
+    }
+
+    static void secondTask(int num){
+        for (int i = 2; i < num; i++) {
+            Boolean simple = True;
+            for (int j = 2; j < (i-1); j++) {
+                if (i % j == 0) {
+                    simple = False;
+                }
+            if (simple){
+                System.out.println(i);
+            }
+
+        }
+
+    }
 
 
-}}
+}
+
 
