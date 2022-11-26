@@ -83,12 +83,27 @@ public class HwOne {
         System.out.println(Arrays.toString(expr_spl));
         char[] var1 = expr_spl[0].toCharArray();
         char[] var2 = expr_spl[2].toCharArray();
-        System.out.println(Arrays.toString(var1));
-        System.out.println(Arrays.toString(var2));
+        int var3 = Integer.parseInt(expr_spl[4]);
+        String act = expr_spl[3];
+        int unkVar1 = getUnknown(var1);
+        int unkVar2 = getUnknown(var2);
+        System.out.printf(unkVar1 + " " + unkVar2);
 
 
         }
 
+
+    static int getUnknown(char[] var) {
+        int res = 0;
+        for (int i = 0; i < var.length; i++) {
+            if (!Character.isDigit(var[i])) {
+                res = i;
+                return res;
+            }
+        }
+        return res;
     }
+}
+
 
 
