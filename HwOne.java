@@ -78,7 +78,8 @@ public class HwOne {
         }
     }
 
-    static void fourthTask(String expr){
+
+    static void fourthTask(String expr) {
         String[] expr_spl = expr.split(" ");
         System.out.println(Arrays.toString(expr_spl));
         char[] var1 = expr_spl[0].toCharArray();
@@ -87,10 +88,28 @@ public class HwOne {
         String act = expr_spl[3];
         int unkVar1 = getUnknown(var1);
         int unkVar2 = getUnknown(var2);
-        System.out.printf(unkVar1 + " " + unkVar2);
+//        String num1 = new String(var1);
+//        String num2 = new String(var2);
+
+//
+        for (int i = 0; i < 10; i++) {
+            int num1 = varToNum(var1, i, unkVar1);
+            for (int j = 0; j < 10; j++) {
+                int num2 =varToNum(var2, j, unkVar2);
 
 
         }
+      }
+    }
+
+
+    static int varToNum(char[] var, int i, int unk){
+        char e = (char)(i +'0');
+        var[unk] = e;
+        String strNum1 = new String(var);
+        int num1 = Integer.parseInt(strNum1);
+        return num1;
+    }
 
 
     static int getUnknown(char[] var) {
