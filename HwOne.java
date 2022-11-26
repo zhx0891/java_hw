@@ -88,24 +88,35 @@ public class HwOne {
         String act = expr_spl[1];
         int unkVar1 = getUnknown(var1);
         int unkVar2 = getUnknown(var2);
+        int ind1;
+        int ind2;
+        if (unkVar1 == 0){ind1 = 1;} else {ind1 = 0;}
+        if (unkVar2 == 0){ind2 = 1;} else {ind2 = 0;}
 
-        for (int i = 0; i < 10; i++) {
+        for ( int i = ind1 ; i < 10; i++) {
             int num1 = varToNum(var1, i, unkVar1);
-            for (int j = 0; j < 10; j++) {
-                int num2 =varToNum(var2, j, unkVar2);
-                if (act == "+"){if (num1 + num2 == num3){System.out.println(num1+ " + "+num2+" = "+num3);}}
-                if (act == "-"){if (num1 - num2 == num3){System.out.println(num1+ " - "+num2+" = "+num3);}}
+//            System.out.println("   "+num1);
+            for (int j = ind2; j < 10; j++) {
+
+                int num2 = varToNum(var2, j, unkVar2);
+                if (act == "+"){
+                    if ((num1 + num2) == num3){    //после  выполнения  этого условия  действие ниже не  срабатывает, просто продит дальше
+//                        System.out.println(num1+ " + "+num2+" = "+num3);
+                        System.out.println("!!!!!!!!!!!!!!!!!");
+                    }
+                }
+                if (act == "-"){if ((num1 - num2) == num3){System.out.println(num1+ " - "+num2+" = "+num3);}}
         }
       }
     }
 
 
-    static int varToNum(char[] var, int i, int unk){
-        char e = (char)(i +'0');
+    static int varToNum(char[] var, int ind, int unk){
+        char e = (char)(ind +'0');
         var[unk] = e;
-        String strNum1 = new String(var);
-        int num1 = Integer.parseInt(strNum1);
-        return num1;
+        String strNum = new String(var);
+        int num = Integer.parseInt(strNum);
+        return num;
     }
 
 
