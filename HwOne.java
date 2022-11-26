@@ -84,20 +84,17 @@ public class HwOne {
         System.out.println(Arrays.toString(expr_spl));
         char[] var1 = expr_spl[0].toCharArray();
         char[] var2 = expr_spl[2].toCharArray();
-        int var3 = Integer.parseInt(expr_spl[4]);
-        String act = expr_spl[3];
+        int num3 = Integer.parseInt(expr_spl[4]);
+        String act = expr_spl[1];
         int unkVar1 = getUnknown(var1);
         int unkVar2 = getUnknown(var2);
-//        String num1 = new String(var1);
-//        String num2 = new String(var2);
 
-//
         for (int i = 0; i < 10; i++) {
             int num1 = varToNum(var1, i, unkVar1);
             for (int j = 0; j < 10; j++) {
                 int num2 =varToNum(var2, j, unkVar2);
-
-
+                if (act == "+"){if (num1 + num2 == num3){System.out.println(num1+ " + "+num2+" = "+num3);}}
+                if (act == "-"){if (num1 - num2 == num3){System.out.println(num1+ " - "+num2+" = "+num3);}}
         }
       }
     }
