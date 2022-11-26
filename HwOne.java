@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HwOne {
@@ -79,10 +80,15 @@ public class HwOne {
 
     static void fourthTask(String expr){
         String[] expr_spl = expr.split(" ");
+        System.out.println(Arrays.toString(expr_spl));
+        char[] var1 = expr_spl[0].toCharArray();
+        char[] var2 = expr_spl[2].toCharArray();
+        System.out.println(Arrays.toString(var1));
+        System.out.println(Arrays.toString(var2));
 
 
         }
 
     }
-}
+
 
