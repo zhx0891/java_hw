@@ -4,7 +4,8 @@ public class HwOne {
     public static void main(String[] args) {
 //        firstTask();
 //        secondTask(1000);
-        thirdTask();
+//        thirdTask();
+        fourthTask("2? + ?5 = 69");
     }
 
 
@@ -74,6 +75,14 @@ public class HwOne {
                     System.out.println("что то пошло не так  ;) ");
             }
         }
+    }
+
+    static void fourthTask(String expr){
+        String[] expr_spl = expr.split(" ");
+
+
+        }
+
     }
 }
 
