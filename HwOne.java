@@ -53,22 +53,23 @@ public class HwOne {
         Scanner str = new Scanner(System.in);
         String expr = str.nextLine();
         String[] strSplit = expr.split(" ");
-        if (strSplit.length != 3) {System.out.println("Некорректный ввод");}
-        else {
-            int  a = Integer.parseInt(strSplit[0]);
-            int  b = Integer.parseInt(strSplit[2]);
-            switch (strSplit[1]){
+        if (strSplit.length != 3) {
+            System.out.println("Некорректный ввод");
+        } else {
+            int a = Integer.parseInt(strSplit[0]);
+            int b = Integer.parseInt(strSplit[2]);
+            switch (strSplit[1]) {
                 case ("+"):
-                    System.out.println(expr  + " = " + (a+b));
+                    System.out.println(expr + " = " + (a + b));
                     break;
                 case ("-"):
-                    System.out.println(expr  + " = " + (a-b));
+                    System.out.println(expr + " = " + (a - b));
                     break;
                 case ("*"):
-                    System.out.println(expr  + " = " + (a*b));
+                    System.out.println(expr + " = " + (a * b));
                     break;
                 case ("/"):
-                    System.out.println(expr  + " = " + (a/b));
+                    System.out.println(expr + " = " + (a / b));
                     break;
                 default:
                     System.out.println("что то пошло не так  ;) ");
