@@ -91,22 +91,15 @@ public class HwOne {
         int unkVar2 = getUnknown(var2);
         int ind1;
         int ind2;
-//        if (unkVar1 == 0){ind1 = 1;} else {ind1 = 0;}
+        if (unkVar1 == 0){ind1 = 1;} else {ind1 = 0;}
         if (unkVar2 == 0){ind2 = 1;} else {ind2 = 0;}
 
         for ( int i = 4 ; i < 10; i++) {
             int num1 = varToNum(var1, i, unkVar1);
-//            System.out.println("   "+num1);
             for (int j = ind2; j < 10; j++) {
-
                 int num2 = varToNum(var2, j, unkVar2);
-                if (act == "+"){    //после  выполнения  этого условия  действие ниже не  срабатывает, просто проходит дальше
-                    if ((num1 + num2) == num3){
-//                        System.out.println(num1+ " + "+num2+" = "+num3);
-                        System.out.println("!!!!!!!!!!!!!!!!!");
-                    }
-                }
-                if (act == "-"){if ((num1 - num2) == num3){System.out.println(num1+ " - "+num2+" = "+num3);}}
+                if (act.equals("+")){if ((num1 + num2) == num3){System.out.println(num1+ " + "+num2+" = "+num3);}}
+                if (act.equals("-")){if ((num1 - num2) == num3){System.out.println(num1+ " - "+num2+" = "+num3);}}
         }
       }
     }
