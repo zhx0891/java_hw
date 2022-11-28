@@ -1,10 +1,12 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HwOne {
     public static void main(String[] args) {
 //        firstTask();
 //        secondTask(1000);
-        thirdTask();
+//        thirdTask();
+        fourthTask("2? + ?5 = 69");
     }
 
 
@@ -76,5 +78,60 @@ public class HwOne {
             }
         }
     }
+
+
+    static void fourthTask(String expr) {
+        String[] expr_spl = expr.split(" ");
+        System.out.println(Arrays.toString(expr_spl));
+        char[] var1 = expr_spl[0].toCharArray();
+        char[] var2 = expr_spl[2].toCharArray();
+        int num3 = Integer.parseInt(expr_spl[4]);
+        String act = expr_spl[1];
+        int unkVar1 = getUnknown(var1);
+        int unkVar2 = getUnknown(var2);
+        int ind1;
+        int ind2;
+//        if (unkVar1 == 0){ind1 = 1;} else {ind1 = 0;}
+        if (unkVar2 == 0){ind2 = 1;} else {ind2 = 0;}
+
+        for ( int i = 4 ; i < 10; i++) {
+            int num1 = varToNum(var1, i, unkVar1);
+//            System.out.println("   "+num1);
+            for (int j = ind2; j < 10; j++) {
+
+                int num2 = varToNum(var2, j, unkVar2);
+                if (act == "+"){    //после  выполнения  этого условия  действие ниже не  срабатывает, просто проходит дальше
+                    if ((num1 + num2) == num3){
+//                        System.out.println(num1+ " + "+num2+" = "+num3);
+                        System.out.println("!!!!!!!!!!!!!!!!!");
+                    }
+                }
+                if (act == "-"){if ((num1 - num2) == num3){System.out.println(num1+ " - "+num2+" = "+num3);}}
+        }
+      }
+    }
+
+
+    static int varToNum(char[] var, int ind, int unk){
+        char e = (char)(ind +'0');
+        var[unk] = e;
+        String strNum = new String(var);
+        int num = Integer.parseInt(strNum);
+        return num;
+    }
+
+
+    static int getUnknown(char[] var) {
+        int res = 0;
+        for (int i = 0; i < var.length; i++) {
+            if (!Character.isDigit(var[i])) {
+                res = i;
+                return res;
+            }
+        }
+        return res;
+    }
 }
+
+
 
