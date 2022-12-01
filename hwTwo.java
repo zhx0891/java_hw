@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class hwTwo {
     public static void main(String[] args) {
 //        firstTaskFromSeminar();
-        secondTaskFromSeminar("aaabbbcccddd");
+//        secondTaskFromSeminar("aaabbbcccddd");
+        System.out.println(thirdTaskFromSeminar("dfasdfafdsafd"));
+
 
 
 
@@ -41,5 +43,19 @@ public class hwTwo {
         }
         System.out.println(result);
 
+    }
+    static boolean thirdTaskFromSeminar(String line){
+
+        int cot = 0;
+        for (int i = 0; i < (line.length() / 2) ; i++) {
+            cot++;
+
+            if(String.valueOf(line.charAt(i)).equals(String.valueOf(line.charAt(line.length() - cot)))){
+                continue;
+            }
+            else{return false;}
+
+        }
+        return true;
     }
 }
