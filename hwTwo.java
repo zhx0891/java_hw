@@ -1,10 +1,14 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class hwTwo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        //задачи с семинара
 //        firstTaskFromSeminar();
 //        secondTaskFromSeminar("aaabbbcccddd");
-        System.out.println(thirdTaskFromSeminar("dfasdfafdsafd"));
+//        System.out.println(thirdTaskFromSeminar("dfasdfafdsafd"));
+        fourthTaskFromSeminar();
 
 
 
@@ -57,5 +61,19 @@ public class hwTwo {
 
         }
         return true;
+    }
+
+
+    static void fourthTaskFromSeminar() throws IOException {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i <= 100 ; i++) {
+            result.append(i +":"+"test"+" ");
+        }
+        System.out.println(result);
+        FileWriter fw = new FileWriter("100test.txt");
+//        String toFile = result.toString();
+        fw.write(result.toString());
+        fw.close();
+
     }
 }
