@@ -1,10 +1,17 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class hwTwo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        //задачи с семинара
 //        firstTaskFromSeminar();
 //        secondTaskFromSeminar("aaabbbcccddd");
-        System.out.println(thirdTaskFromSeminar("dfasdfafdsafd"));
+//        System.out.println(thirdTaskFromSeminar("dfasdfafdsafd"));
+//        fourthTaskFromSeminar();
+        fifthTaskFromSeminar();
+
 
 
 
@@ -57,5 +64,49 @@ public class hwTwo {
 
         }
         return true;
+    }
+
+
+    static void fourthTaskFromSeminar() throws IOException {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i <= 100 ; i++) {
+            result.append(i +":"+"test"+" ");
+        }
+        System.out.println(result);
+        FileWriter fw = new FileWriter("100test.txt");
+//        String toFile = result.toString();
+        fw.write(result.toString());//toString() стрингбилдер в строку
+        fw.close();
+
+    }
+
+
+    static void fifthTaskFromSeminar() throws IOException {
+        String [] listDir = getListDir();
+        for (String str : listDir)
+        {
+            System.out.println(str);
+        }
+        
+//        File directory = new File("");
+//        for(File file : directory.listFiles())
+//        {
+//            System.out.println(file.getName());
+//        }
+
+    }
+    static String[] getListDir(){
+     File directory = new File("");
+     String path = directory.getAbsolutePath();
+     File curDir = new File(path);
+     String [] dir = new String[];
+     int count = 0;
+     for (File fi : curDir.listFiles())
+     {
+         dir[count] = fi.getName();
+         count++;
+     }
+        return dir;
+
     }
 }
