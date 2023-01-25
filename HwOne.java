@@ -3,21 +3,21 @@ import java.util.Scanner;
 
 public class HwOne {
     public static void main(String[] args) {
-//        firstTask();
+        firstTask(5);
 //        secondTask(1000);
 //        thirdTask();
-        fourthTask("2? + ?5 = 69");
+//        fourthTask("2? + ?5 = 69");
     }
 
 
-    static void firstTask() {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Хочу треугольное число, пиши :  ");
-        int num = scan.nextInt();
-        num++;
+    static void firstTask(int num) {
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("Хочу треугольное число, пиши :  ");
+//        int num = scan.nextInt();
+//        num++;
         int sum = 0;
         int mult = 1;
-        for (int i = 0; i < num; i++) {
+        for (int i = 0; i <= num; i++) {
             sum = sum + i;
             if (i > 0) {
                 mult = mult * i;
