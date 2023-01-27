@@ -129,11 +129,8 @@ public class HwOne {
         return res;
     }
     static void fifthTask(int [] arr, int val){
-        StringBuilder w = new StringBuilder(Arrays.toString(arr));
-//        String w = "asdfasd";
-        System.out.println(w);
-        w.indexOf(4);
-        System.out.println(w);
+
+
 
 
 
