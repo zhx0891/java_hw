@@ -129,6 +129,19 @@ public class HwOne {
         return res;
     }
     static void fifthTask(int [] arr, int val){
+        String valSt = Integer.toString(val);
+        StringBuilder strArr = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            strArr.append(arr[i]);
+        }
+        for (int i = 0; i < strArr.length() ; i++) {
+            if(valSt.equals(strArr.charAt(i))) {
+                strArr.append(strArr.charAt(i));
+                strArr.deleteCharAt(i);
+                i--;
+            }
+        }
+
 
 
 
