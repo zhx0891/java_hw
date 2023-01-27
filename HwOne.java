@@ -1,12 +1,16 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class HwOne {
     public static void main(String[] args) {
-        firstTask(5);
+        int [] fifth = {5, 6, 2, 6, 9, 1};
+//        firstTask(5);
 //        secondTask(1000);
 //        thirdTask();
 //        fourthTask("2? + ?5 = 69");
+        fifthTask(fifth, 6);
     }
 
 
@@ -123,6 +127,23 @@ public class HwOne {
             }
         }
         return res;
+    }
+    static void fifthTask(int [] arr, int val){
+        StringBuilder w = new StringBuilder(Arrays.toString(arr));
+//        String w = "asdfasd";
+        System.out.println(w);
+        w.indexOf(4);
+        System.out.println(w);
+
+
+
+//        for (int i = 0; i < arrStr.length; i++) {
+//            if (arrStr[i] == val) {
+//
+//            }
+//
+//        }
+//    return resArr;
     }
 }
 
