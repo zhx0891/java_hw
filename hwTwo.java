@@ -1,22 +1,40 @@
-//import java.io.File;
-//import java.io.FileWriter;
-//import java.io.IOException;
-//import java.util.Scanner;
-//
-//public class hwTwo {
-//    public static void main(String[] args) throws IOException {
-//        //задачи с семинара
-////        firstTaskFromSeminar();
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class hwTwo {
+    public static void main(String[] args) throws IOException {
+        //задачи с семинара
+//        firstTaskFromSeminar();
 ////        secondTaskFromSeminar("aaabbbcccddd");
 ////        System.out.println(thirdTaskFromSeminar("dfasdfafdsafd"));
 ////        fourthTaskFromSeminar();
 ////        fifthTaskFromSeminar();
+        int [] firstArr = {3, 5, 6, 8, 0};
+        firstTaskHw(firstArr);
 //
 //
 //
 //
 //
-//    }
+    }
+    static void firstTaskHw(int[] arr){
+        int tmp = 0;
+//        StringBuilder strArr = new StringBuilder(Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length ; j++) {
+                if (arr[i] > arr[j]){
+                    tmp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = tmp;
+                }
+            }
+        }
+            System.out.print(Arrays.toString(arr));
+    }
+
 //    static void firstTaskFromSeminar(){
 //        Scanner userInp = new Scanner(System.in);
 //        StringBuilder result = new StringBuilder();
@@ -34,6 +52,8 @@
 //
 //
 //    }
+
+
 //    static void secondTaskFromSeminar(String line){
 //        int count = 0;
 //        StringBuilder result = new StringBuilder();
@@ -109,4 +129,4 @@
 //        return dir;
 //
 //    }
-//}
+}
