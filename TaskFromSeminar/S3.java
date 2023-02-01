@@ -9,7 +9,8 @@ import java.util.Random;
 public class S3 {
     public static void main(String[] args) {
 //        taskOne(10);
-        taskTwo();
+//        taskTwo();
+        taskThree();
 
     }
 
@@ -50,8 +51,21 @@ public class S3 {
                 countName = 0;
             }
         }
+//        for (int i = 0; i < listPlanets.size() ; i++) {
+//            for (int j = i + 1; j < listPlanets.size() ; j++) {
+//                if (listPlanets.get(i).equals(listPlanets.get(j)) ){
+//                    listPlanets.remove(j);
+//                    j--;
+//                }
+//            }
+//        }
     }
 
+
+//    static void taskThree(){
+//        ArrayList<String> lst = new ArrayList<String>();
+//        lst.add(6);
+//    }
 
     static void showMeList(List lst){
         for (int i = 0; i < lst.size(); i++) {
