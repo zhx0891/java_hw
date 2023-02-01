@@ -10,7 +10,7 @@ public class S3 {
     public static void main(String[] args) {
 //        taskOne(10);
 //        taskTwo();
-        taskThree();
+//        taskThree();
 
     }
 
