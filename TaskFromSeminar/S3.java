@@ -43,7 +43,7 @@ public class S3 {
     static void showMeList(List lst){
         for (int i = 0; i < lst.size(); i++) {
 
-            System.out.print(lst.get(i) + " ");
+            System.out.print(lst.get(i) + "!");
         }
     }
 }
