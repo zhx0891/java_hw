@@ -13,12 +13,12 @@ public class hwThree {
             lst.add(rand.nextInt(10));
         }
         showMeList(lst);
-        taskOne(lst);
-
+//        taskTwo(lst);
+        taskThree(lst);
     }
 
 
-    static void taskOne(List<Integer> lst){
+    static void taskTwo(List<Integer> lst){
         for (int i = 0; i < lst.size(); i++) {
             if (((lst.get(i) % 2) == 0) && (lst.get(i) != 0) ){
                 lst.remove(i);
@@ -28,10 +28,26 @@ public class hwThree {
         showMeList(lst);
     }
 
+    static void taskThree(List<Integer> lst){
+        int min = lst.get(0);
+        int max = lst.get(0);
+        int medium = 0;
+
+        for (int i = 0; i < lst.size(); i++) {
+            if (lst.get(i) < min){
+                min = lst.get(i);
+            }
+            if(lst.get(i) > max){
+                max = lst.get(i);
+            }
+            medium = medium + lst.get(i);
+        }
+        System.out.println("min = " + min + "\n" + "max = " + max + "\n" + "medium = " + (medium/lst.size()));
+    }
+
 
     static void showMeList(List lst){
         for (int i = 0; i < lst.size(); i++) {
-
             System.out.print(lst.get(i) + "!");
         }
         System.out.println();
