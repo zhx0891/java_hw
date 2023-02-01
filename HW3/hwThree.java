@@ -13,7 +13,7 @@ public class hwThree {
             lst.add(rand.nextInt(10));
         }
         showMeList(lst);
-//        taskTwo(lst);
+        taskTwo(lst);
         taskThree(lst);
     }
 
@@ -27,6 +27,7 @@ public class hwThree {
         }
         showMeList(lst);
     }
+
 
     static void taskThree(List<Integer> lst){
         int min = lst.get(0);
