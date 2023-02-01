@@ -34,11 +34,24 @@ public class S3 {
         Random planet = new Random();
         ArrayList <String> listPlanets = new ArrayList<>();
         for (int i = 0; i <planets.length ; i++) {
-            listPlanets.add(planets[planet.nextInt(10)]);
+            listPlanets.add(planets[planet.nextInt(9)]);
         }
         showMeList(listPlanets);
-
+        System.out.println();
+        int countName = 0;
+        for (int i = 0; i < planets.length; i++) {
+            for (int j = 0; j < listPlanets.size(); j++) {
+                if (planets[i].equals(listPlanets.get(j))){
+                    countName ++;
+                }
+            }
+            if (countName > 0){
+                System.out.println(planets[i]+ " = " + countName);
+                countName = 0;
+            }
+        }
     }
+
 
     static void showMeList(List lst){
         for (int i = 0; i < lst.size(); i++) {
