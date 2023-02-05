@@ -63,7 +63,7 @@ public class hwThree {
 
     static void mergeIt(List lists){
         for (int i = 0; i < lists.size(); i = i + 2) {
-            System.out.println(lists.get(i).);
+            System.out.println();
 
 //            for (int j = 0; j < lists.get(i) ; j++) {
 //

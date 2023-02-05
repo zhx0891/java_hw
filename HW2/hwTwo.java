@@ -1,8 +1,8 @@
-import java.io.File;
+import TaskFromSeminar.S3;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -10,7 +10,7 @@ import java.util.logging.SimpleFormatter;
 
 public class hwTwo {
     public static void main(String[] args) throws IOException {
-        Logger logger = Logger.getLogger(CalcWithLogger.class.getName());
+        Logger logger = Logger.getLogger(S3.CalcWithLogger.class.getName());
         FileHandler  fh = new FileHandler();
 
         logger.addHandler(fh);
@@ -21,7 +21,7 @@ public class hwTwo {
 
         int[] firstArr = {3, 5, 6, 8, 0};
         firstTaskHw(firstArr);
-//        CalcWithLogger.secondTask();
+//        TaskFromSeminar.S3.CalcWithLogger.secondTask();
 //        secondTask();
 
     }
