@@ -15,7 +15,7 @@ public class hwThree {
         showMeList(lst);
 //        taskTwo(lst);
 //        taskThree(lst);
-        taskOne(lst);
+//        taskOne(lst);
     }
 
 
@@ -48,17 +48,17 @@ public class hwThree {
     }
 
 
-    static void taskOne(List lst){
-        int len = lst.size();
-//        LinkedList<LinkedList<Integer>> lists = new LinkedList<>(); //создаю лист листов
-        List<List<Integer>> lists = new LinkedList<>();
-        for (int i = 0; i < len; i++) {
-            lists.add(new LinkedList<>());
-            lists.get(i).add((Integer) lst.get(i));  //заполняю его значениями из сортируемого массива
-        }
-        showMeList(lists);
-        mergeIt(lists);
-    }
+//    static void taskOne(List lst){
+//        int len = lst.size();
+////        LinkedList<LinkedList<Integer>> lists = new LinkedList<>(); //создаю лист листов
+//        List<List<Integer>> lists = new LinkedList<>();
+//        for (int i = 0; i < len; i++) {
+//            lists.add(new LinkedList<>());
+//            lists.get(i).add((Integer) lst.get(i));  //заполняю его значениями из сортируемого массива
+//        }
+//        showMeList(lists);
+//        mergeIt(lists);
+//    }
 
 
     static void mergeIt(List lists){
@@ -97,5 +97,5 @@ public class hwThree {
     }
 
 
-    static List
+//    static List
 }
