@@ -48,6 +48,38 @@ public class hwThree {
     }
 
 
+    static void taskOne(List lst){
+        int len = lst.size();
+//        LinkedList<LinkedList<Integer>> lists = new LinkedList<>(); //создаю лист листов
+        List<List<Integer>> lists = new LinkedList<>();
+        for (int i = 0; i < len; i++) {
+            lists.add(new LinkedList<>());
+            lists.get(i).add((Integer) lst.get(i));  //заполняю его значениями из сортируемого массива
+        }
+        showMeList(lists);
+        mergeIt(lists);
+    }
+
+
+    static void mergeIt(List lists){
+        for (int i = 0; i < lists.size(); i = i + 2) {
+            System.out.println();
+
+//            for (int j = 0; j < lists.get(i) ; j++) {
+//
+//                int a = lists.get(i).hashCode();
+//                int b = lists.get(i + 1).hashCode();
+//
+//                if (a < b) {
+//
+//
+//                }
+//
+//            }
+
+
+        }
+    }
     static void showMeList(List lst){
         for (int i = 0; i < lst.size(); i++) {
             System.out.print(lst.get(i) + "!");
