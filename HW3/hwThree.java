@@ -13,8 +13,9 @@ public class hwThree {
             lst.add(rand.nextInt(10));
         }
         showMeList(lst);
-        taskTwo(lst);
-        taskThree(lst);
+//        taskTwo(lst);
+//        taskThree(lst);
+        taskOne(lst);
     }
 
 
@@ -53,4 +54,16 @@ public class hwThree {
         }
         System.out.println();
     }
+
+    static void taskOne(List lst){
+
+        if (lst.size() % 2 > 0){
+
+
+        }
+
+    }
+
+
+    static List
 }
