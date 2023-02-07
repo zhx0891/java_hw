@@ -49,8 +49,9 @@ public class HwFive {
         phoneBook.put(63536, "Сидоров");
         phoneBook.put(81234,"Иванов");
 
-        giveMeNums(phoneBook, "Иванов" );
-        giveMyRowers(employees);
+//        giveMeNums(phoneBook, "Иванов" );
+//        giveMyRowers(employees);
+        giveMeRomeNum(5464);
 
 
 
@@ -85,7 +86,52 @@ public class HwFive {
         }
         System.out.println(listNames);
         TreeMap<String, Integer> sortedMap = new TreeMap<>(listNames);
-        System.out.println(sortedMap.);
+
+
+
+
+
+    }
+
+
+    static void giveMeRomeNum(int num){
+        HashMap<Integer, String> romNums = new HashMap<>();
+        romNums.put(1,"I");
+        romNums.put(2,"II");
+        romNums.put(3,"III");
+        romNums.put(4,"IV");
+        romNums.put(5,"V");
+        romNums.put(6,"VI");
+        romNums.put(7,"VII");
+        romNums.put(8,"VIII");
+        romNums.put(9,"IX");
+        romNums.put(10,"X");
+        romNums.put(50,"L");
+        romNums.put(90,"XC");
+        romNums.put(100,"C");
+        romNums.put(500,"D");
+        romNums.put(1000,"M");
+
+
+        String res;
+        StringBuilder test = new StringBuilder();
+        int lenNum = test.append(num).length();
+        switch (lenNum){
+            case 1:
+                System.out.println();
+                break;
+            case 2:
+                System.out.println();
+                break;
+            case 3:
+                System.out.println();
+                break;
+            case 4:
+                System.out.println();
+                break;
+        }
+
+
 
 
     }
