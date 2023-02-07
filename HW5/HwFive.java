@@ -84,6 +84,9 @@ public class HwFive {
             }
         }
         System.out.println(listNames);
+        TreeMap<String, Integer> sortedMap = new TreeMap<>(listNames);
+        System.out.println(sortedMap.);
+
 
     }
 }
