@@ -51,7 +51,7 @@ public class HwFive {
 
 //        giveMeNums(phoneBook, "Иванов" );
 //        giveMyRowers(employees);
-        giveMeRomeNum(5464);
+        giveMeRomeNum(5567);
 
 
 
@@ -114,22 +114,25 @@ public class HwFive {
 
 
         String res;
-        StringBuilder test = new StringBuilder();
-        int lenNum = test.append(num).length();
-        switch (lenNum){
-            case 1:
-                System.out.println();
-                break;
-            case 2:
-                System.out.println();
-                break;
-            case 3:
-                System.out.println();
-                break;
-            case 4:
-                System.out.println();
-                break;
-        }
+        StringBuilder numStr = new StringBuilder();
+        int lenNum = numStr.append(num).length();
+        System.out.println(romNums.get(1));
+//        switch (lenNum){
+//            case 1:
+//                System.out.println(romNums.get(1));
+//
+//                }
+//                break;
+//            case 2:
+//                System.out.println();
+//                break;
+//            case 3:
+//                System.out.println();
+//                break;
+//            case 4:
+//                System.out.println();
+//                break;
+//        }
 
 
 
