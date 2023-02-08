@@ -51,7 +51,7 @@ public class HwFive {
 
 //        giveMeNums(phoneBook, "Иванов" );
 //        giveMyRowers(employees);
-        giveMeRomeNum(5567);
+        giveMeRomeNum(5);
 
 
 
@@ -94,38 +94,41 @@ public class HwFive {
     }
 
 
-    static void giveMeRomeNum(int num){
+    static void giveMeRomeNum(int num) {
         HashMap<Integer, String> romNums = new HashMap<>();
-        romNums.put(1,"I");
-        romNums.put(2,"II");
-        romNums.put(3,"III");
-        romNums.put(4,"IV");
-        romNums.put(5,"V");
-        romNums.put(6,"VI");
-        romNums.put(7,"VII");
-        romNums.put(8,"VIII");
-        romNums.put(9,"IX");
-        romNums.put(10,"X");
-        romNums.put(50,"L");
-        romNums.put(90,"XC");
-        romNums.put(100,"C");
-        romNums.put(500,"D");
-        romNums.put(1000,"M");
+        romNums.put(1, "I");
+        romNums.put(2, "II");
+        romNums.put(3, "III");
+        romNums.put(4, "IV");
+        romNums.put(5, "V");
+        romNums.put(6, "VI");
+        romNums.put(7, "VII");
+        romNums.put(8, "VIII");
+        romNums.put(9, "IX");
+        romNums.put(10, "X");
+        romNums.put(50, "L");
+        romNums.put(90, "XC");
+        romNums.put(100, "C");
+        romNums.put(500, "D");
+        romNums.put(1000, "M");
 
 
         String res;
         StringBuilder numStr = new StringBuilder();
         int lenNum = numStr.append(num).length();
-        System.out.println(romNums.get(1));
-//        switch (lenNum){
+        rm(romNums, 456);
+//        System.out.println(romNums.get(num));
+
+
+//        switch (lenNum) {
 //            case 1:
-//                System.out.println(romNums.get(1));
-//
-//                }
+//                System.out.println(romNums.get(0));
 //                break;
+//
 //            case 2:
 //                System.out.println();
 //                break;
+//    }
 //            case 3:
 //                System.out.println();
 //                break;
@@ -138,4 +141,42 @@ public class HwFive {
 
 
     }
-}
+    static void rm(HashMap romNums, int num){
+        String numStr = "" + num;
+        String [] numInt = numStr.split("");
+        String res = "";
+
+//        for (int i = 0; i < numInt.length; i++) {
+//            if (numInt[i]. != 0){
+//                if (numInt.length == 1){
+//                    res = res + romNums.get(numInt[i]);
+//                    System.out.println(res);
+//                    break;
+//                }
+//                if (numInt.length == 2){
+//                    if (i == 0){
+//                        for (int j = 0; j < numInt[i]; j++) {
+//
+//                        }
+////                        res = res + (numInt[i] * romNums.get(numInt[i]));
+//                    }
+//                }
+//            }
+////            res = res + romNums.get(numInt[i]);
+//
+//            }
+
+        }
+
+
+        static int [] intToArr(int num){
+            String numStr = "" + num;
+        int[] res = new int[numStr.length()];
+            for (int i = 0; i < res.length; i++) {
+
+            }
+        return res;
+        }
+
+    }
+//}
