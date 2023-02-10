@@ -4,8 +4,8 @@ public class Notebook {
     String tradeMark;
     String color;
     String cpu;
-    int hddSize;
-    int ramSize;
+    String hddSize;
+    String ramSize;
     Boolean isOs;
 
 }
