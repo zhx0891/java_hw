@@ -10,9 +10,10 @@ public class Order {
 
     public void viewOrder (String tm, String color, String cpu, String hdd, String ram, String os){
         clearConsole();
-        System.out.println( "1. Объём оперативной памяти.\n" +
+        System.out.println(
+                "1. Торговая марка. - " + tm + "\n" +
                 "2. Объём жёсткого диска.  - "+ hdd +" \n" +
-                "3. Торговая марка. - " + tm + "\n" +
+                "3. Объём оперативной памяти. - " + ram + "\n" +
                 "4. Процессор. - " + cpu + "\n" +
                 "5. Операционная система. - " + os + "\n" +
                 "6. Цвет - " + color );

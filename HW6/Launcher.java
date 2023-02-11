@@ -88,15 +88,21 @@ public class Launcher {
         note1.ramSize = "32";
         note1.isOs = true;
 
-        var notebooks = new HashSet<Notebook>(Arrays.asList(note1, note2, note3, note4, note5, note6, note7, note8, note9, note10));
+        var notebooks = new HashSet<Notebook>(Arrays.asList(note1, note2, note3,
+                note4, note5, note6, note7, note8, note9, note10));
+
         buyerDialog(notebooks);
     }
     static void buyerDialog(Set notes){
         Scanner scan = new Scanner(System.in);
         Order order = new Order();
-        System.out.println("Добро пожаловать в наш магазин. Давайте зададим критерии вашего нового ноутбука. " +
+
+        System.out.println("Добро пожаловать в наш магазин." +
+                " Давайте зададим критерии вашего нового ноутбука. " +
                 "Продолжить? да\\нет");
+
         String begin = scan.nextLine();
+
         if(begin.equals("да")){
             System.out.println();
         }
@@ -104,18 +110,70 @@ public class Launcher {
             System.exit(0);
         }
 
-        order.viewOrder(order.tradeMark, order.color, order.cpu, order.hddSize, order.ramSize, order.isOs);
-        System.out.print("Начнём с торговой марки. В продаже ноутбуки четырёх вендоров: MSI, ASUS, ACER, HP.\n" +
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
+
+        System.out.println("Начнём с торговой марки. " +
+                "В продаже ноутбуки четырёх вендоров: MSI, ASUS, ACER, HP.\n" +
                 " Если это не важно нажмите ENTER  или впишите название и нажмите ENTER ");
+
         String vendor = scan.nextLine();
         order.tradeMark = checkAnswer(vendor);
-        order.viewOrder(order.tradeMark, order.color, order.cpu, order.hddSize, order.ramSize, order.isOs);
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
+        System.out.println("Выберите объём жёсткого диска. " +
+                "В продаже ноутбуки  с дисками размером: 500, 1000, 2000, 3000  гигабайт \n" +
+                " Если это не важно нажмите ENTER  или впишите значение  и нажмите ENTER ");
+
+        String hdd = scan.nextLine();
+        order.hddSize = checkAnswer(hdd);
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
+        System.out.println("Выберите объём оперативной памяти. " +
+                "В продаже ноутбуки с установленными объёмами ОЗУ: 4, 8, 16, 32  гигабайта \n" +
+                " Если это не важно нажмите ENTER  или впишите значение  и нажмите ENTER ");
+
+        String ram = scan.nextLine();
+        order.ramSize = checkAnswer(ram);
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
+        System.out.println("Выберите процессор. " +
+                "В продаже ноутбуки с установленными процессорами: INTEL и  AMD  \n" +
+                " Если это не важно нажмите ENTER  или впишите значение  и нажмите ENTER ");
+
+        String cpu = scan.nextLine();
+        order.cpu = checkAnswer(cpu);
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
+        System.out.println("Наличие предустановленной ОС " +
+                "да - если нужна, нет - если не нужна  \n" +
+                " Если это не важно нажмите ENTER  или впишите значение  и нажмите ENTER ");
+
+        String os = scan.nextLine();
+        order.isOs = checkAnswer(os);
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
+        System.out.println("И самое важное в финале, выберите цвет " +
+                "К сожалению розовые закончились, в наличии только чёрные и белые  \n" +
+                " Если это не важно нажмите ENTER  или впишите значение  и нажмите ENTER ");
+
+        String color = scan.nextLine();
+        order.color = checkAnswer(color);
+        order.viewOrder(order.tradeMark, order.color, order.cpu,
+                order.hddSize, order.ramSize, order.isOs);
+
     }
     static String checkAnswer(String answ){
         if(answ.length() != 0){
             return answ;
         }else {
-            return " ";
+            return "";
         }
     }
 
