@@ -95,18 +95,17 @@ public class Launcher {
 
     }
     static void findIt(Order ord, List<Notebook> notes){
+
         int count = 0;
-        for (Notebook item : notes) {
-            if(item.tradeMark.equals(ord.tradeMark) || ord.tradeMark.equals("*")){
-                System.out.println("1");
-                if (item.color.equals(ord.color) || ord.color.equals("*")){
-                    System.out.println("2");
-                    if(item.cpu.equals(ord.cpu) || ord.cpu.equals("*")){
-                        if(item.hddSize.equals(ord.hddSize) || ord.hddSize.equals("*")){
-                            if (item.ramSize.equals(ord.ramSize) || ord.ramSize.equals("*")){
-                                if(item.isOs.equals(ord.isOs) || ord.isOs.equals("*")){
+        for (int i = 0; i <notes.size() ; i++) {
+            if(notes.get(i).tradeMark.equals(ord.tradeMark) || ord.tradeMark.equals("*")){
+                if (notes.get(i).color.equals(ord.color) || ord.color.equals("*")){
+                    if(notes.get(i).cpu.equals(ord.cpu) || ord.cpu.equals("*")){
+                        if(notes.get(i).hddSize.equals(ord.hddSize) || ord.hddSize.equals("*")){
+                            if (notes.get(i).ramSize.equals(ord.ramSize) || ord.ramSize.equals("*")){
+                                if(notes.get(i).isOs.equals(ord.isOs) || ord.isOs.equals("*")){
                                     count++;
-                                    item.showParam();
+                                    notes.get(i).showParam();
                                 }
                                 }
                             }

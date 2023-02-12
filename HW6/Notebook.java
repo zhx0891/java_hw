@@ -15,6 +15,7 @@ public class Notebook {
                         " Процессор. - " + cpu + "\n" +
                         " Операционная система. - " + isOs + "\n" +
                         " Цвет - " + color );
+        System.out.println();
     }
 
 }
