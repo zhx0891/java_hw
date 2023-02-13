@@ -1,13 +1,13 @@
 package HW6;
 
 public class Notebook {
-    static String tradeMark;
-    static String color;
-    static String cpu;
-    static String hddSize;
-    static String ramSize;
-    static String isOs;
-    static void showParam(){
+     String tradeMark;
+     String color;
+     String cpu;
+     String hddSize;
+     String ramSize;
+     String isOs;
+     void showParam(){
         System.out.println(
                         " Торговая марка. - " + tradeMark + "\n" +
                         " Объём жёсткого диска.  - "+ hddSize +" \n" +
