@@ -88,7 +88,7 @@ public class Launcher {
 //        Set<Notebook> notebooks = new HashSet<Notebook>(Arrays.asList(note1, note2, note3,
 //                note4, note5, note6, note7, note8, note9, note10));
         List<Notebook> notebooks = new ArrayList<>(Arrays.asList(note1, note2, note3,
-                note4, note5, note6, note7, note8, note9, note10));
+                note4, note5, note6, note7, note8, note9));
         Order order = buyerDialog();
         findIt(order, notebooks);
 
