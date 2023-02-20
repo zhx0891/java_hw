@@ -1,23 +1,59 @@
 package HW6;
 
 public class Notebook {
-<<<<<<< HEAD
-    String tradeMark;
-    String color;
-    String cpu;
-    String hddSize;
-    String ramSize;
-    String isOs;
-    static void showParam(){
-=======
-     String tradeMark;
-     String color;
-     String cpu;
-     String hddSize;
-     String ramSize;
-     String isOs;
+
+     private String tradeMark;
+     private String color;
+     private String cpu;
+     private String hddSize;
+     private String ramSize;
+     private String isOs;
+
+    void setTradeMark(String tm){
+         this.tradeMark = tm;
+     }
+    void setColor(String color){
+        this.color = color;
+    }
+    void setCpu(String cpu){
+        this.cpu = cpu;
+    }
+    void setHddSize(String hdd){
+        this.hddSize = hdd;
+    }
+    void setRamSize(String rm){
+        this.ramSize = rm;
+    }
+    void setIsOs(String os){
+        this.isOs = os;
+    }
+
+    String getMark(){
+        return this.tradeMark;
+    }
+
+    String getColor(){
+        return this.color;
+    }
+
+    String getCpu(){
+        return this.cpu;
+    }
+
+    String getHddSize(){
+        return this.getHddSize();
+    }
+
+    String getRamSize(){
+        return this.ramSize;
+    }
+
+    String getIsOs(){
+        return this.isOs;
+    }
+
+
      void showParam(){
->>>>>>> a5a836c84e73129c9c125badacd4a8fecd78c107
         System.out.println(
                         " Торговая марка. - " + tradeMark + "\n" +
                         " Объём жёсткого диска.  - "+ hddSize +" \n" +
@@ -27,5 +63,4 @@ public class Notebook {
                         " Цвет - " + color );
         System.out.println();
     }
-
 }
