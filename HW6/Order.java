@@ -17,6 +17,7 @@ public class Order {
                 "4. Процессор. - " + cpu + "\n" +
                 "5. Операционная система. - " + os + "\n" +
                 "6. Цвет - " + color );
+        System.out.println();
     }
     static void clearConsole(){
         for (int i = 0; i < 30; i++) {
