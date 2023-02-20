@@ -48,36 +48,42 @@ public class Launcher {
         List<Notebook> notebooks = new ArrayList<>(Arrays.asList(note1, note2, note3, note4, note5));
 
         OrderNotebook orderNotebook = buyerDialog();
+        System.out.println(notebooks.get(0).getMark());
         findIt(orderNotebook, notebooks);
 
 
+
     }
-    static void findIt(OrderNotebook ord, List<Notebook> notes){
+    static void findIt(OrderNotebook ord, List<Notebook> notes) {
 
         int count = 0;
-        for (int i = 0; i <notes.size() ; i++) {
-            if(notes.get(i).getMark().equals(ord.tradeMark) || ord.tradeMark.equals("*")){
-                if (notes.get(i).getColor().equals(ord.color) || ord.color.equals("*")){
-                    if(notes.get(i).getCpu().equals(ord.cpu) || ord.cpu.equals("*")){
-                        if(notes.get(i).getHddSize().equals(ord.hddSize) || ord.hddSize.equals("*")){
-                            if (notes.get(i).getRamSize().equals(ord.ramSize) || ord.ramSize.equals("*")){
-                                if(notes.get(i).getIsOs().equals(ord.isOs) || ord.isOs.equals("*")){
+        for (int i = 0; i < notes.size(); i++) {
+            if (notes.get(i).getMark().equals(ord.tradeMark) || ord.tradeMark.equals("*")) {
+                if (notes.get(i).getColor().equals(ord.color) || ord.color.equals("*")) {
+                    if (notes.get(i).getCpu().equals(ord.cpu) || ord.cpu.equals("*")) {
+                        if (notes.get(i).getHddSize().equals(ord.hddSize) || ord.hddSize.equals("*")) {
+                            if (notes.get(i).getRamSize().equals(ord.ramSize) || ord.ramSize.equals("*")) {
+                                if (notes.get(i).getIsOs().equals(ord.isOs) || ord.isOs.equals("*")) {
                                     count++;
                                     notes.get(i).showParam();
                                 }
-                              }
                             }
                         }
                     }
                 }
             }
-        if (count == 0){
-            System.out.println("Сожалеем но ноутбука с такими  параметрами у нас нет.");
+//            if (count == 0) {
+//                System.out.println("Сожалеем но ноутбука с такими  параметрами у нас нет.");
+//            } else {
+//                System.out.println("Найдено " + count + " совпадений. ");
+//            }
         }
-        else {
+        if (count == 0) {
+            System.out.println("Сожалеем но ноутбука с такими  параметрами у нас нет.");
+        } else {
             System.out.println("Найдено " + count + " совпадений. ");
         }
-        }
+    }
 
     static OrderNotebook buyerDialog(){
         Scanner scan = new Scanner(System.in);
@@ -156,7 +162,7 @@ public class Launcher {
         return orderNotebook;
 
     }
-    static String checkAnswer(String answ){
+     static String checkAnswer(String answ){
         if(answ.length() != 0){
             return answ;
         }
@@ -164,5 +170,4 @@ public class Launcher {
             return "*";
         }
     }
-
 }

@@ -41,7 +41,7 @@ public class Notebook {
     }
 
     String getHddSize(){
-        return this.getHddSize();
+        return this.hddSize;
     }
 
     String getRamSize(){

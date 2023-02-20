@@ -1,6 +1,6 @@
 package HW6;
 
-public class OrderNotebook {
+public class OrderNotebook extends Order {
     String tradeMark = "пусто";
     String color = "пусто";
     String cpu = "пусто";
@@ -23,5 +23,10 @@ public class OrderNotebook {
         for (int i = 0; i < 30; i++) {
             System.out.println();
         }
+    }
+
+    @Override
+    void viewOrder() {
+
     }
 }
