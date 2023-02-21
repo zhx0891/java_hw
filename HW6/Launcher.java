@@ -56,7 +56,7 @@ public class Launcher {
 
 
     }
-    static void findIt(Order ord, List<Notebook> notes){
+    static void findIt(OrderNotebook ord, List<Notebook> notes){
 
         int count = 0;
         for (int i = 0; i <notes.size() ; i++) {
@@ -85,7 +85,7 @@ public class Launcher {
 //    }
     static Order buyerDialog(){
         Scanner scan = new Scanner(System.in);
-        Order order = new Order();
+        Order order = new OrderNotebook();
 
         System.out.println("Добро пожаловать в наш магазин." +
                 " Давайте зададим критерии вашего нового ноутбука. " +
