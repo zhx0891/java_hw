@@ -1,6 +1,8 @@
 package HW7;
 
-abstract class Drink {
+import java.util.Iterator;
+
+abstract class Drink implements Iterator {
     private String tradeMark;
     private double volume;
     private int temperature;
