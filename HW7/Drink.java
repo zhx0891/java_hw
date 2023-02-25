@@ -26,4 +26,27 @@ abstract class Drink implements Iterator {
     int getTemperature(){
         return this.temperature;
     }
+    int count;
+    @Override
+    public boolean hasNext() {
+        return count++ < 3;
+    }
+
+    @Override
+    public String next() { // почему не смог сделать метод void ?
+        switch (count){
+            case (1):
+                return String.format("Наименование: %s", this.getTradeMark());
+
+            case (2):
+                return String.format("Объём : %f", this.getVolume());
+
+            case (3):
+                return String.format("Температура: %d", this.getTemperature());
+
+            default:
+                return String.format("Некорректынй ввод");
+        }
+
+    }
 }

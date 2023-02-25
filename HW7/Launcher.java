@@ -12,7 +12,7 @@
 //        drinks.add(drink2);
 //        HotDrink drink3 = new HotDrink("coffee_3", 0.5, 50);
 //        drinks.add(drink3);
-//        HotDrink drink4 = new HotDrink("tea", 0.5, 70);
+//        HotDrink drink4 = new HotDrink("tea", 0.5, 50);
 //        drinks.add(drink4);
 //        AutomatHotDrinks automat1 = new AutomatHotDrinks(drinks);
 //        automat1.getProduct("coffee_1",0.5 , 40);
