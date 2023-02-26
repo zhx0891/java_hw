@@ -6,16 +6,16 @@ public class Launcher {
     public static void main(String[] args) {
         ArrayList<Drink> drinks = new ArrayList<>();
 
-        HotDrink drink1 = new HotDrink("coffee_1", 0.5 , 60);
+        HotDrink drink1 = new HotDrink("coffee_1", "0.5" , "60");
         drinks.add(drink1);
-        HotDrink drink2 = new HotDrink("coffee_1", 0.33, 40);
+        HotDrink drink2 = new HotDrink("coffee_1", "0.33", "40");
         drinks.add(drink2);
-        HotDrink drink3 = new HotDrink("coffee_3", 0.5, 50);
+        HotDrink drink3 = new HotDrink("coffee_3", "0.5", "50");
         drinks.add(drink3);
-        HotDrink drink4 = new HotDrink("tea", 0.5, 50);
+        HotDrink drink4 = new HotDrink("tea", "0.5", "50");
+
         drinks.add(drink4);
         AutomatOfDrinks automat1 = new AutomatHotDrinks(drinks);
-//        automat1.getProduct("coffee_1",0.5 , 40);
         automat1.userChoice();
     }
 }

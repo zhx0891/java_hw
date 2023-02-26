@@ -4,10 +4,10 @@ import java.util.Iterator;
 
 abstract class Drink implements Iterator {
     private String tradeMark;
-    private double volume;
-    private int temperature;
+    private String volume;
+    private String temperature;
 
-    Drink(String aTradeMark, double aVolume, int aTemperature){
+    Drink(String aTradeMark, String aVolume, String aTemperature){
         this.temperature = aTemperature;
         this.tradeMark = aTradeMark;
         this.volume = aVolume;
@@ -20,10 +20,10 @@ abstract class Drink implements Iterator {
     String getTradeMark(){
         return this.tradeMark;
     }
-    double getVolume(){
+    String getVolume(){
         return this.volume;
     }
-    int getTemperature(){
+    String getTemperature(){
         return this.temperature;
     }
     int count;
@@ -36,13 +36,13 @@ abstract class Drink implements Iterator {
     public String next() { // почему не смог сделать метод void ?
         switch (count){
             case (1):
-                return String.format("Наименование: %s", this.getTradeMark());
+                return  this.getTradeMark();
 
             case (2):
-                return String.format("Объём : %f", this.getVolume());
+                return this.getVolume();
 
             case (3):
-                return String.format("Температура: %d", this.getTemperature());
+                return  this.getTemperature();
 
             default:
                 return String.format("Некорректынй ввод");

@@ -11,27 +11,29 @@ import java.util.Scanner;
      public AutomatOfDrinks(ArrayList<Drink> listProduct) {
          this.drinks = listProduct;
      }
-     public Drink getProduct (String tm,double vol, int tmpr){
+     public Drink getProduct (String tm, String vol, String tmpr){
          for (int i = 0; i < this.drinks.size(); i++) {
              Drink drink = this.drinks.get(i);
              Iterator<String> components = drink;
 
              while (components.hasNext()) {
+
                  int count = 0;
                  if (components.next().equals(tm)) {
+
                      count++;
                  }
-                 if (components.next().equals(Double.toString(vol)) && count == 1) {
+                 if (components.next().equals(vol) && count == 1) {
                      count++;
                  }
-                 if (components.next().equals(Integer.toString(tmpr)) && count == 2) {
+                 if (components.next().equals(tmpr) && count == 2) {
                      return drink;
                  } else {
                      count = 0;
                  }
              }
          }
-         return null;
+
      }
 
 
