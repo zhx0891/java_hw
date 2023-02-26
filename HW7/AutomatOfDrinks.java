@@ -15,25 +15,23 @@ import java.util.Scanner;
          for (int i = 0; i < this.drinks.size(); i++) {
              Drink drink = this.drinks.get(i);
              Iterator<String> components = drink;
-
+             int ind = 0;
              while (components.hasNext()) {
+//                 System.out.println(components.next());
 
-                 int count = 0;
+
                  if (components.next().equals(tm)) {
-
-                     count++;
+                     ind++;
                  }
-                 if (components.next().equals(vol) && count == 1) {
-                     count++;
+                 if (components.next().equals(vol) && ind == 1) {
+                     ind++;
                  }
-                 if (components.next().equals(tmpr) && count == 2) {
+                 if (components.next().equals(tmpr) && ind == 2) {
                      return drink;
-                 } else {
-                     count = 0;
                  }
              }
          }
-
+         return null;
      }
 
 
