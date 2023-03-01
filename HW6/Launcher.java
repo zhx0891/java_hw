@@ -5,45 +5,12 @@ import java.util.*;
 public class Launcher {
     public static void main(String[] args) {
 
-        Notebook note1 = new Notebook();
-        note1.setTradeMark("MSI");
-        note1.setColor("black");
-        note1.setCpu("intel");
-        note1.setHddSize("1000");
-        note1.setRamSize("16");
-        note1.setIsOs("да");
+        Notebook note1 = new Notebook("MSI", "black", "intel", "1000", "16", "да");
+        Notebook note2 = new Notebook("ACER", "white", "AMD", "5000","8", "да");
+        Notebook note3 = new Notebook("HP", "white", "intel", "2000", "16", "да");
+        Notebook note4 = new Notebook("ASUS", "white", "AMD", "3000", "4", "нет");
+        Notebook note5 = new Notebook("HP", "white", "intel", "3000", "32", "нет");
 
-        Notebook note2 = new Notebook();
-        note2.setTradeMark("ACER");
-        note2.setColor("white");
-        note2.setCpu("AMD");
-        note2.setHddSize("5000");
-        note2.setRamSize("8");
-        note2.setIsOs("да");
-
-        Notebook note3 = new Notebook();
-        note3.setTradeMark("HP");
-        note3.setColor("white");
-        note3.setCpu("intel");
-        note3.setHddSize("2000");
-        note3.setRamSize("16");
-        note3.setIsOs("да");
-
-        Notebook note4 = new Notebook();
-        note1.setTradeMark("ASUS");
-        note1.setColor("white");
-        note1.setCpu("AMD");
-        note1.setHddSize("3000");
-        note1.setRamSize("4");
-        note1.setIsOs("нет");
-
-        Notebook note5 = new Notebook();
-        note5.setTradeMark("HP");
-        note5.setColor("white");
-        note5.setCpu("intel");
-        note5.setHddSize("3000");
-        note5.setRamSize("32");
-        note5.setIsOs("нет");
 
         List<Notebook> notebooks = new ArrayList<>(Arrays.asList(note1, note2, note3, note4, note5));
 
@@ -74,11 +41,7 @@ public class Launcher {
                     }
                 }
             }
-//            if (count == 0) {
-//                System.out.println("Сожалеем но ноутбука с такими  параметрами у нас нет.");
-//            } else {
-//                System.out.println("Найдено " + count + " совпадений. ");
-//            }
+
         }
         if (count == 0) {
             System.out.println("Сожалеем но ноутбука с такими  параметрами у нас нет.");
