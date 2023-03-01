@@ -1,6 +1,7 @@
 package HW6;
 
 public class Notebook {
+
      private String tradeMark;
      private String color;
      private String cpu;
@@ -40,7 +41,7 @@ public class Notebook {
     }
 
     String getHddSize(){
-        return this.getHddSize();
+        return this.hddSize;
     }
 
     String getRamSize(){
@@ -50,6 +51,7 @@ public class Notebook {
     String getIsOs(){
         return this.isOs;
     }
+
 
      void showParam(){
         System.out.println(
@@ -61,5 +63,4 @@ public class Notebook {
                         " Цвет - " + color );
         System.out.println();
     }
-
 }
