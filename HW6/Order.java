@@ -1,6 +1,8 @@
 package HW6;
 
 abstract class Order {
-    abstract void viewOrder();
+    public void viewOrder() {
+
+    }
 
 }

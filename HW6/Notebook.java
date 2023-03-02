@@ -8,25 +8,16 @@ public class Notebook {
      private String hddSize;
      private String ramSize;
      private String isOs;
+public Notebook(String tm, String color, String cpu, String hdd, String ram, String os){
+    this.tradeMark = tm;
+    this.color = color;
+    this.cpu = cpu;
+    this.hddSize = hdd;
+    this.ramSize = ram;
+    this.isOs = os;
 
-    void setTradeMark(String tm){
-         this.tradeMark = tm;
-     }
-    void setColor(String color){
-        this.color = color;
-    }
-    void setCpu(String cpu){
-        this.cpu = cpu;
-    }
-    void setHddSize(String hdd){
-        this.hddSize = hdd;
-    }
-    void setRamSize(String rm){
-        this.ramSize = rm;
-    }
-    void setIsOs(String os){
-        this.isOs = os;
-    }
+}
+
 
     String getMark(){
         return this.tradeMark;
