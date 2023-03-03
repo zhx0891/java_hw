@@ -1,3 +1,5 @@
+package HW2;
+
 import TaskFromSeminar.S3;
 
 import java.io.FileWriter;
