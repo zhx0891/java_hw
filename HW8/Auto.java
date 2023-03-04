@@ -11,7 +11,7 @@ abstract class Auto {
         this.speed = speed;
     }
 abstract void ignition();
-    public double move(double distance){
-        return distance / this.speed;
+    public double move(double time){
+        return time * this.speed;
     }
 }
