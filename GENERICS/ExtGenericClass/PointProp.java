@@ -11,7 +11,7 @@ public class PointProp<T> {
         }
     }
 }
-class Point2D<T2D> extends PointProp<T2D> {
+class Point2D<T2D> extends PointProp<T2D> {//здесь обобщённый тип  должен быть только наследником  PointProp
     T2D x, y;
 
     public Point2D(T2D x, T2D y) {

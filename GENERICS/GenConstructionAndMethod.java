@@ -1,5 +1,6 @@
 package GENERICS;
 
+import java.util.List;
 import java.util.Map;
 
 public class GenConstructionAndMethod {
@@ -22,5 +23,18 @@ class Digit{
     <T extends Number>Digit(T value){//Обобщённый конструктор
         this.value = value.doubleValue();
     }
+    public static <U> U getElementFromUCollection(List<U> col, int index) {
+        return col.get(index);
+    }
 
+
+    // #endregion
+
+    //#region
+
+    public static <T1, T2> T2 put(T1 arg1, T2 arg2) {
+        // Map<Integer,String> hm = new HashMap<>();
+        // hm.put(key, value)
+        return arg2;
+    }
 }
