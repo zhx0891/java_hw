@@ -14,7 +14,7 @@ public class Program {
         }else if(specialty.equalsIgnoreCase("c++")){
             return new CppDeveloperFactory();
         }else {
-            throw new RuntimeException(specialty + "is unknow specealty");
+            throw new RuntimeException(specialty + "is unknow specialty");
         }
       }
     }
